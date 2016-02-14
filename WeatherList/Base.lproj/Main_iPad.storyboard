@@ -36,7 +36,7 @@
                                 <rect key="frame" x="20" y="292" width="560" height="17"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" size="system"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -75,16 +75,16 @@
         <scene sceneID="smW-Zh-WAh">
             <objects>
                 <tableViewController title="Master" clearsSelectionOnViewWillAppear="NO" id="7bK-jq-Zjz" customClass="MasterViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" sectionHeaderHeight="22" sectionFooterHeight="22" id="r7i-6Z-zg0">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="64" sectionHeaderHeight="22" sectionFooterHeight="22" id="r7i-6Z-zg0">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="padMasterCell" id="xWA-GE-eRH" customClass="PadCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="padMasterCell" id="xWA-GE-eRH" customClass="PadCell">
                                 <rect key="frame" x="0.0" y="86" width="600" height="64"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xWA-GE-eRH" id="qsd-3W-f1b">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="63"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X0f-gk-pFE">
@@ -93,7 +93,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="San Francisco" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3d1-se-rjE">
                                                     <rect key="frame" x="8" y="0.0" width="513" height="48"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="72" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FU2-TI-OP1">
@@ -102,11 +102,11 @@
                                                         <constraint firstAttribute="width" constant="48" id="GQ1-is-IqB"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.63932986974158945" green="1" blue="0.52817504523156922" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="FU2-TI-OP1" secondAttribute="bottom" id="5fm-WF-xRE"/>
                                                 <constraint firstItem="FU2-TI-OP1" firstAttribute="leading" secondItem="3d1-se-rjE" secondAttribute="trailing" constant="7" id="8wL-Yh-LVI"/>
@@ -121,7 +121,7 @@
                                     <constraints>
                                         <constraint firstAttribute="topMargin" secondItem="X0f-gk-pFE" secondAttribute="top" id="Px8-kv-ePo"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="X0f-gk-pFE" secondAttribute="leading" id="cV0-hk-sOA"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="X0f-gk-pFE" secondAttribute="bottom" constant="-1" id="jAh-fw-eZc"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="X0f-gk-pFE" secondAttribute="bottom" id="jAh-fw-eZc"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="X0f-gk-pFE" secondAttribute="trailing" id="tXh-u8-F5a"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -129,6 +129,7 @@
                                     <outlet property="cityName" destination="3d1-se-rjE" id="r15-zz-6LA"/>
                                     <outlet property="cityTemp" destination="FU2-TI-OP1" id="tde-UR-B7u"/>
                                     <outlet property="padView" destination="X0f-gk-pFE" id="XHy-5S-0tP"/>
+                                    <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="showDetail" id="xga-ww-92m"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -160,4 +161,7 @@
             <point key="canvasLocation" x="-45" y="129"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="xga-ww-92m"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -12,9 +12,13 @@
 #import "PhoneCell.h"
 #import "PadCell.h"
 
+#import "UIColor+CustomColors.h"
+
+
 @interface MasterViewController ()
 
 @property NSMutableArray *objects;
+
 @end
 
 @implementation MasterViewController
@@ -22,11 +26,13 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-	self.navigationItem.leftBarButtonItem = self.editButtonItem;
+//	self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
 	UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
 	self.navigationItem.rightBarButtonItem = addButton;
 	self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    
+    self.view.backgroundColor = [UIColor coldColor];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -61,6 +67,13 @@
 	}
 }
 
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator>)coordinator {
+    
+    NSLog( @"In viewWillTransitionToSize" );
+    [self.tableView reloadData];
+}
+
+
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -77,58 +90,46 @@
 	
 	if ( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ) {
 		PadCell *pad = (PadCell *)[tableView dequeueReusableCellWithIdentifier:@"padMasterCell" forIndexPath:indexPath];
+
+        pad.contentView.backgroundColor = [UIColor coldColor];
+        pad.padView.backgroundColor = [UIColor warmColor];
+		
 ///		pad.cityName.text = [object description];
 ///		pad.cityTemp.text = @"68";
-		
-//		CALayer *layer = pad.padView.layer;
-//		layer.shadowOffset = CGSizeMake(0, 2);
-//		layer.shadowColor = [[UIColor blackColor] CGColor];
-//		layer.shadowRadius = 2.0f;
-//		layer.shadowOpacity = 0.80f;
-//		CGRect f = layer.bounds;
-//		NSLog( @"layer.bounds -> x: %02f, y: %02f, w: %02f, h: %02f", f.origin.x, f.origin.y, f.size.width, f.size.height);
-//		
-//		f.size.width -= 20;
-//		layer.shadowPath = [[UIBezierPath bezierPathWithRect:f] CGPath];
-
+        
+        [pad setNeedsLayout];
+        [pad layoutIfNeeded];
+        
+		CALayer *layer = pad.padView.layer;
+		layer.shadowOffset = CGSizeMake(0, 2);
+		layer.shadowColor = [[UIColor blackColor] CGColor];
+		layer.shadowRadius = 1.0f;
+		layer.shadowOpacity = 0.80f;
+        layer.shadowPath = [[UIBezierPath bezierPathWithRect:layer.bounds] CGPath];
+        
 		return pad;
 	} else {
-		PhoneCell *phone = (PhoneCell *)[tableView dequeueReusableCellWithIdentifier:@"phoneMasterCell" forIndexPath:indexPath];;
+		PhoneCell *phone = (PhoneCell *)[tableView dequeueReusableCellWithIdentifier:@"phoneMasterCell" forIndexPath:indexPath];
+
+        phone.contentView.backgroundColor = [UIColor coldColor];
+        phone.phoneView.backgroundColor = [UIColor warmColor];
+
 ///		phone.cityName.text = [object description];
 ///		phone.cityTemp.text = @"68";
 //		phone.cityIcon = @"68";
 		
+        [phone setNeedsLayout];
+        [phone layoutIfNeeded];
+
 		CALayer *layer = phone.phoneView.layer;
-//		layer.shadowOffset = CGSizeMake(0, 2);
-//		layer.shadowColor = [[UIColor blackColor] CGColor];
-//		layer.shadowRadius = 2.0f;
-//		layer.shadowOpacity = 0.80f;
-		CGRect f = layer.frame;
-		NSLog( @"layer.frame -> x: %02f, y: %02f, w: %02f, h: %02f", f.origin.x, f.origin.y, f.size.width, f.size.height);
-		f = phone.phoneView.frame;
-		NSLog( @"phone.phoneView.frame -> x: %02f, y: %02f, w: %02f, h: %02f", f.origin.x, f.origin.y, f.size.width, f.size.height);
-		f = self.view.bounds;
-		NSLog( @"self.view.bounds -> x: %02f, y: %02f, w: %02f, h: %02f", f.origin.x, f.origin.y, f.size.width, f.size.height);
-//
-//		f.size.width -= 20;
-//		layer.shadowPath = [[UIBezierPath bezierPathWithRect:f] CGPath];
-		
+		layer.shadowOffset = CGSizeMake(0, 2);
+		layer.shadowColor = [[UIColor blackColor] CGColor];
+		layer.shadowRadius = 2.0f;
+		layer.shadowOpacity = 0.80f;
+        layer.shadowPath = [[UIBezierPath bezierPathWithRect:layer.bounds] CGPath];
+
 		return phone;
 	}
 }
-
-//- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-//	// Return NO if you do not want the specified item to be editable.
-//	return YES;
-//}
-//
-//- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-//	if (editingStyle == UITableViewCellEditingStyleDelete) {
-//	    [self.objects removeObjectAtIndex:indexPath.row];
-//	    [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-//	} else if (editingStyle == UITableViewCellEditingStyleInsert) {
-//	    // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-//	}
-//}
 
 @end

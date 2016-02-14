@@ -7,6 +7,8 @@
 //
 
 #import "DetailViewController.h"
+#import "UIColor+CustomColors.h"
+
 
 @interface DetailViewController ()
 
@@ -27,6 +29,7 @@
 
 - (void)configureView {
 	// Update the user interface for the detail item.
+    self.view.backgroundColor = [UIColor coldColor];
 	if (self.detailItem) {
 	    self.detailDescriptionLabel.text = [self.detailItem description];
 	}

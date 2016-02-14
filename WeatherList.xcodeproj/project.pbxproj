@@ -19,6 +19,7 @@
 		A93F6A5D1C6FF51F009E7144 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93F6A5B1C6FF51F009E7144 /* Main_iPad.storyboard */; };
 		A93F6A601C6FFA27009E7144 /* PhoneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A93F6A5F1C6FFA27009E7144 /* PhoneCell.m */; };
 		A93F6A641C6FFC3F009E7144 /* PadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A93F6A631C6FFC3F009E7144 /* PadCell.m */; };
+		A9A2DB7E1C70469200CE0765 /* UIColor+CustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A2DB7D1C70469200CE0765 /* UIColor+CustomColors.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		A93F6A5F1C6FFA27009E7144 /* PhoneCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhoneCell.m; path = TableCells/PhoneCell.m; sourceTree = "<group>"; };
 		A93F6A621C6FFC3F009E7144 /* PadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PadCell.h; path = TableCells/PadCell.h; sourceTree = "<group>"; };
 		A93F6A631C6FFC3F009E7144 /* PadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PadCell.m; path = TableCells/PadCell.m; sourceTree = "<group>"; };
+		A9A2DB7C1C70469200CE0765 /* UIColor+CustomColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+CustomColors.h"; path = "Extensions/UIColor+CustomColors.h"; sourceTree = "<group>"; };
+		A9A2DB7D1C70469200CE0765 /* UIColor+CustomColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+CustomColors.m"; path = "Extensions/UIColor+CustomColors.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,7 @@
 				A93F6A2C1C6FE713009E7144 /* MasterViewController.m */,
 				A93F6A2E1C6FE713009E7144 /* DetailViewController.h */,
 				A93F6A2F1C6FE713009E7144 /* DetailViewController.m */,
+				A9A2DB7F1C70469C00CE0765 /* Extensions */,
 				A93F6A611C6FFA2E009E7144 /* TableCells */,
 				A93F6A311C6FE713009E7144 /* Main_iPhone.storyboard */,
 				A93F6A5B1C6FF51F009E7144 /* Main_iPad.storyboard */,
@@ -164,6 +168,15 @@
 				A93F6A631C6FFC3F009E7144 /* PadCell.m */,
 			);
 			name = TableCells;
+			sourceTree = "<group>";
+		};
+		A9A2DB7F1C70469C00CE0765 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A9A2DB7C1C70469200CE0765 /* UIColor+CustomColors.h */,
+				A9A2DB7D1C70469200CE0765 /* UIColor+CustomColors.m */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,6 +316,7 @@
 				A93F6A271C6FE713009E7144 /* main.m in Sources */,
 				A93F6A301C6FE713009E7144 /* DetailViewController.m in Sources */,
 				A93F6A641C6FFC3F009E7144 /* PadCell.m in Sources */,
+				A9A2DB7E1C70469200CE0765 /* UIColor+CustomColors.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,6 +552,7 @@
 				A93F6A541C6FE714009E7144 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A93F6A551C6FE714009E7144 /* Build configuration list for PBXNativeTarget "WeatherListTests" */ = {
 			isa = XCConfigurationList;
@@ -546,6 +561,7 @@
 				A93F6A571C6FE714009E7144 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A93F6A581C6FE714009E7144 /* Build configuration list for PBXNativeTarget "WeatherListUITests" */ = {
 			isa = XCConfigurationList;
@@ -554,6 +570,7 @@
 				A93F6A5A1C6FE714009E7144 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
