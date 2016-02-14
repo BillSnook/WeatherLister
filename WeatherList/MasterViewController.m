@@ -12,12 +12,15 @@
 #import "PhoneCell.h"
 #import "PadCell.h"
 
+#import "Networking.h"
+
 #import "UIColor+CustomColors.h"
 
 
 @interface MasterViewController ()
 
 @property NSMutableArray *objects;
+@property Networking *netMgr;
 
 @end
 
@@ -33,6 +36,10 @@
 	self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
     
     self.view.backgroundColor = [UIColor coldColor];
+    
+    self.netMgr = [[Networking alloc] init];
+    [self.netMgr getData];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
