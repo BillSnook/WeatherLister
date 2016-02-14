@@ -11,11 +11,14 @@
 		A93F6A2A1C6FE713009E7144 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A93F6A291C6FE713009E7144 /* AppDelegate.m */; };
 		A93F6A2D1C6FE713009E7144 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A93F6A2C1C6FE713009E7144 /* MasterViewController.m */; };
 		A93F6A301C6FE713009E7144 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A93F6A2F1C6FE713009E7144 /* DetailViewController.m */; };
-		A93F6A331C6FE713009E7144 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93F6A311C6FE713009E7144 /* Main.storyboard */; };
+		A93F6A331C6FE713009E7144 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93F6A311C6FE713009E7144 /* Main_iPhone.storyboard */; };
 		A93F6A351C6FE713009E7144 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A93F6A341C6FE713009E7144 /* Assets.xcassets */; };
 		A93F6A381C6FE713009E7144 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93F6A361C6FE713009E7144 /* LaunchScreen.storyboard */; };
 		A93F6A431C6FE714009E7144 /* WeatherListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A93F6A421C6FE714009E7144 /* WeatherListTests.m */; };
 		A93F6A4E1C6FE714009E7144 /* WeatherListUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A93F6A4D1C6FE714009E7144 /* WeatherListUITests.m */; };
+		A93F6A5D1C6FF51F009E7144 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93F6A5B1C6FF51F009E7144 /* Main_iPad.storyboard */; };
+		A93F6A601C6FFA27009E7144 /* PhoneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A93F6A5F1C6FFA27009E7144 /* PhoneCell.m */; };
+		A93F6A641C6FFC3F009E7144 /* PadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A93F6A631C6FFC3F009E7144 /* PadCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +47,7 @@
 		A93F6A2C1C6FE713009E7144 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		A93F6A2E1C6FE713009E7144 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		A93F6A2F1C6FE713009E7144 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		A93F6A321C6FE713009E7144 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A93F6A321C6FE713009E7144 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		A93F6A341C6FE713009E7144 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A93F6A371C6FE713009E7144 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A93F6A391C6FE713009E7144 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,6 +57,11 @@
 		A93F6A491C6FE714009E7144 /* WeatherListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A93F6A4D1C6FE714009E7144 /* WeatherListUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherListUITests.m; sourceTree = "<group>"; };
 		A93F6A4F1C6FE714009E7144 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A93F6A5C1C6FF51F009E7144 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		A93F6A5E1C6FFA27009E7144 /* PhoneCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhoneCell.h; path = TableCells/PhoneCell.h; sourceTree = "<group>"; };
+		A93F6A5F1C6FFA27009E7144 /* PhoneCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhoneCell.m; path = TableCells/PhoneCell.m; sourceTree = "<group>"; };
+		A93F6A621C6FFC3F009E7144 /* PadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PadCell.h; path = TableCells/PadCell.h; sourceTree = "<group>"; };
+		A93F6A631C6FFC3F009E7144 /* PadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PadCell.m; path = TableCells/PadCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +118,9 @@
 				A93F6A2C1C6FE713009E7144 /* MasterViewController.m */,
 				A93F6A2E1C6FE713009E7144 /* DetailViewController.h */,
 				A93F6A2F1C6FE713009E7144 /* DetailViewController.m */,
-				A93F6A311C6FE713009E7144 /* Main.storyboard */,
+				A93F6A611C6FFA2E009E7144 /* TableCells */,
+				A93F6A311C6FE713009E7144 /* Main_iPhone.storyboard */,
+				A93F6A5B1C6FF51F009E7144 /* Main_iPad.storyboard */,
 				A93F6A341C6FE713009E7144 /* Assets.xcassets */,
 				A93F6A361C6FE713009E7144 /* LaunchScreen.storyboard */,
 				A93F6A391C6FE713009E7144 /* Info.plist */,
@@ -143,6 +153,17 @@
 				A93F6A4F1C6FE714009E7144 /* Info.plist */,
 			);
 			path = WeatherListUITests;
+			sourceTree = "<group>";
+		};
+		A93F6A611C6FFA2E009E7144 /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				A93F6A5E1C6FFA27009E7144 /* PhoneCell.h */,
+				A93F6A5F1C6FFA27009E7144 /* PhoneCell.m */,
+				A93F6A621C6FFC3F009E7144 /* PadCell.h */,
+				A93F6A631C6FFC3F009E7144 /* PadCell.m */,
+			);
+			name = TableCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,8 +270,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A93F6A381C6FE713009E7144 /* LaunchScreen.storyboard in Resources */,
+				A93F6A5D1C6FF51F009E7144 /* Main_iPad.storyboard in Resources */,
 				A93F6A351C6FE713009E7144 /* Assets.xcassets in Resources */,
-				A93F6A331C6FE713009E7144 /* Main.storyboard in Resources */,
+				A93F6A331C6FE713009E7144 /* Main_iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,8 +299,10 @@
 			files = (
 				A93F6A2A1C6FE713009E7144 /* AppDelegate.m in Sources */,
 				A93F6A2D1C6FE713009E7144 /* MasterViewController.m in Sources */,
+				A93F6A601C6FFA27009E7144 /* PhoneCell.m in Sources */,
 				A93F6A271C6FE713009E7144 /* main.m in Sources */,
 				A93F6A301C6FE713009E7144 /* DetailViewController.m in Sources */,
+				A93F6A641C6FFC3F009E7144 /* PadCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,12 +338,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A93F6A311C6FE713009E7144 /* Main.storyboard */ = {
+		A93F6A311C6FE713009E7144 /* Main_iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A93F6A321C6FE713009E7144 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Main_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
 		A93F6A361C6FE713009E7144 /* LaunchScreen.storyboard */ = {
@@ -328,6 +352,14 @@
 				A93F6A371C6FE713009E7144 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A93F6A5B1C6FF51F009E7144 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A93F6A5C1C6FF51F009E7144 /* Base */,
+			);
+			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -420,6 +452,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WeatherList/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.billsnook.testx.WeatherList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -431,6 +464,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WeatherList/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.billsnook.testx.WeatherList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
