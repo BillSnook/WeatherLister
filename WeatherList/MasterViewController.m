@@ -35,10 +35,7 @@
 	self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
     
     if ( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ) {
-        self.view.backgroundColor = [UIColor coldColor];
-        if ( self.splitViewController.collapsed ) {
-            [self.navigationController setNavigationBarHidden: NO animated: NO];
-        }
+		self.tableView.backgroundColor = [UIColor coldColor];
     } else {
         self.view.backgroundColor = [UIColor backColor];
     }
@@ -57,10 +54,8 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+	
 	self.clearsSelectionOnViewWillAppear = self.splitViewController.isCollapsed;
-
-    [self.navigationController setNavigationBarHidden: YES animated: NO];
-
 	[super viewWillAppear:animated];
 }
 
@@ -104,15 +99,17 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 	if ([[segue identifier] isEqualToString:@"showDetail"]) {
-        [self.navigationController setNavigationBarHidden: YES animated: NO];
 	    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
 	    NSDictionary *object = self.objects[indexPath.row];
-        self.title = @"";
 	    DetailViewController *controller = (DetailViewController *)[[segue destinationViewController] topViewController];
         [controller.navigationController setNavigationBarHidden: YES animated: NO];
 	    [controller setDetailItem: object];
-	    controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
-	    controller.navigationItem.leftItemsSupplementBackButton = YES;
+		
+		if ( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ) {
+			NSNumber *tempNumber = [[[object objectForKey: @"list"] firstObject] objectForKey: @"temp"];
+			int tempInt = [tempNumber intValue];
+			self.tableView.backgroundColor = [UIColor backgroundColor: tempInt];
+		}
 	}
 }
 
@@ -139,7 +136,7 @@
 	if ( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ) {
 		PadCell *pad = (PadCell *)[tableView dequeueReusableCellWithIdentifier:@"padMasterCell" forIndexPath:indexPath];
 
-        pad.contentView.backgroundColor = [UIColor coldColor];
+        pad.contentView.backgroundColor = [UIColor backColor];
 		
 		pad.cityName.text = [city objectForKey: @"name"];
         NSNumber *tempNumber = [[[city objectForKey: @"list"] firstObject] objectForKey: @"temp"];

@@ -59,13 +59,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)touchBackButton:(id)sender {
-//	if (self.splitViewController.collapsed) {
-		[(UINavigationController *)self.splitViewController.viewControllers[0]
-		 popToRootViewControllerAnimated:YES];
-//	}
-}
-
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
 	NSArray *list = [self.detailItem objectForKey: @"list"];
 	return [list count] - 2;
