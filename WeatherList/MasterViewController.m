@@ -82,7 +82,7 @@
 }
 
 - (void)newModelData: (NSNotification *)notification {
-    NSLog( @"In newModelData: %@", [[notification userInfo] description] );
+//    NSLog( @"In newModelData: %@", [[notification userInfo] description] );
     dispatch_async( dispatch_get_main_queue(), ^{
         [self insertNewRow: [notification userInfo]];
         [self nextCity];
@@ -98,7 +98,6 @@
     unsigned long countIndex = [self.objects count] - 1;
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:countIndex inSection:0];
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-//    [self.detailViewController setDetailItem: newCity];
 }
 
 #pragma mark - Segues
@@ -147,7 +146,7 @@
         int tempInt = [tempNumber intValue];
         pad.cityTemp.text = [@(tempInt) stringValue]; // @"68";
         pad.padView.backgroundColor = [UIColor backgroundColor: tempInt];
-        
+		
         [pad setNeedsLayout];
         [pad layoutIfNeeded];
         
@@ -170,7 +169,18 @@
         phone.cityTemp.text = [@(tempInt) stringValue]; // @"68";
         phone.phoneView.backgroundColor = [UIColor backgroundColor: tempInt];
 
-//		phone.cityIcon = @"68";
+		NSString *fileName = [[[city objectForKey: @"list"] firstObject] objectForKey: @"weather"];
+		if ( [fileName isEqualToString: @"Clear"] ) {
+			phone.cityIcon.image = [UIImage imageNamed: @"Sunny"];
+		} else if ( [fileName isEqualToString: @"Rain"] ) {
+			phone.cityIcon.image = [UIImage imageNamed: @"Rainy"];
+		} else if ( [fileName isEqualToString: @"Snow"] ) {
+			phone.cityIcon.image = [UIImage imageNamed: @"Snowy"];
+		} else if ( [fileName isEqualToString: @"Cloud"] ) {
+			phone.cityIcon.image = [UIImage imageNamed: @"Cloudy"];
+		} else {
+			NSLog( @"Unrecognized weather type: %@", fileName );
+		}
 		
         [phone setNeedsLayout];
         [phone layoutIfNeeded];

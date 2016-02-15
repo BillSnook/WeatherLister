@@ -34,8 +34,9 @@
     NSDictionary *day = list[0];
     NSNumber *tempNumber = [day objectForKey: @"temp"];
     int tempInt = [tempNumber intValue];
-    self.cityTemp.text = [@(tempInt) stringValue]; // @"68";
-    
+	self.cityTemp.text = [@(tempInt) stringValue]; // @"68";
+	self.cityIcon.image = [self getIcon: [day objectForKey: @"weather"]];
+	
     self.backColorValue = [UIColor backgroundColor: tempInt];
     self.view.backgroundColor = self.backColorValue;
     self.tableView.backgroundColor = self.backColorValue;
@@ -90,13 +91,13 @@
         //    [ts setDateFormat:@"yyyy-MM-dd kk:mm:ss.SSS"];
         NSString *timeInfo = [ts stringFromDate: testDate];
         
-        phone.cityDay.text = timeInfo;
+		phone.cityDay.text = timeInfo;
+		phone.cityDay.text = timeInfo;
     }
     NSNumber *tempNumber = [day objectForKey: @"temp"];
     int tempInt = [tempNumber intValue];
     phone.cityTemp.text = [@(tempInt) stringValue]; // @"68";
-    //    phone.cityTemp.text = [day objectForKey: @"temp"];
-    
+	
     return phone;
 }
 

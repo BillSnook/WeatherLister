@@ -13,9 +13,11 @@
 @property (strong,nonatomic) NSDictionary *detailItem;
 @property (nonatomic,strong) UIColor *backColorValue;
 
-- (void)setDetailItem:(id)newDetailItem;
+- (void)setDetailItem:(NSDictionary *)newDetailItem;
 
 - (void)configureView;
+
+- (UIImage *)getIcon: (NSString *)fileName;
 
 @end
 

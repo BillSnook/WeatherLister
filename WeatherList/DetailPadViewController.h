@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "DetailViewController.h"
 
-@interface DetailPadViewController : DetailViewController
+@interface DetailPadViewController : DetailViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @end

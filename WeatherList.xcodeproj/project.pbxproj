@@ -19,6 +19,7 @@
 		A93F6A5D1C6FF51F009E7144 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93F6A5B1C6FF51F009E7144 /* Main_iPad.storyboard */; };
 		A93F6A601C6FFA27009E7144 /* PhoneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A93F6A5F1C6FFA27009E7144 /* PhoneCell.m */; };
 		A93F6A641C6FFC3F009E7144 /* PadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A93F6A631C6FFC3F009E7144 /* PadCell.m */; };
+		A976DEC01C723056006EF19C /* PadDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A976DEBF1C723056006EF19C /* PadDetailCell.m */; };
 		A9A2DB7E1C70469200CE0765 /* UIColor+CustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A2DB7D1C70469200CE0765 /* UIColor+CustomColors.m */; };
 		A9A2DBA31C70632200CE0765 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A2DB821C70632200CE0765 /* AFHTTPSessionManager.m */; };
 		A9A2DBA41C70632200CE0765 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A2DB851C70632200CE0765 /* AFNetworkReachabilityManager.m */; };
@@ -84,6 +85,8 @@
 		A93F6A5F1C6FFA27009E7144 /* PhoneCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhoneCell.m; path = TableCells/PhoneCell.m; sourceTree = "<group>"; };
 		A93F6A621C6FFC3F009E7144 /* PadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PadCell.h; path = TableCells/PadCell.h; sourceTree = "<group>"; };
 		A93F6A631C6FFC3F009E7144 /* PadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PadCell.m; path = TableCells/PadCell.m; sourceTree = "<group>"; };
+		A976DEBE1C723056006EF19C /* PadDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PadDetailCell.h; path = TableCells/PadDetailCell.h; sourceTree = "<group>"; };
+		A976DEBF1C723056006EF19C /* PadDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PadDetailCell.m; path = TableCells/PadDetailCell.m; sourceTree = "<group>"; };
 		A9A2DB7C1C70469200CE0765 /* UIColor+CustomColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+CustomColors.h"; path = "Extensions/UIColor+CustomColors.h"; sourceTree = "<group>"; };
 		A9A2DB7D1C70469200CE0765 /* UIColor+CustomColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+CustomColors.m"; path = "Extensions/UIColor+CustomColors.m"; sourceTree = "<group>"; };
 		A9A2DB811C70632200CE0765 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
@@ -241,6 +244,8 @@
 				A93F6A631C6FFC3F009E7144 /* PadCell.m */,
 				A9B690301C7138C5007CDFB4 /* PhoneDetailCell.h */,
 				A9B690311C7138C5007CDFB4 /* PhoneDetailCell.m */,
+				A976DEBE1C723056006EF19C /* PadDetailCell.h */,
+				A976DEBF1C723056006EF19C /* PadDetailCell.m */,
 			);
 			name = TableCells;
 			sourceTree = "<group>";
@@ -459,6 +464,7 @@
 				A93F6A301C6FE713009E7144 /* DetailViewController.m in Sources */,
 				A9A2DBA51C70632200CE0765 /* AFSecurityPolicy.m in Sources */,
 				A9A2DBA61C70632200CE0765 /* AFURLRequestSerialization.m in Sources */,
+				A976DEC01C723056006EF19C /* PadDetailCell.m in Sources */,
 				A93F6A641C6FFC3F009E7144 /* PadCell.m in Sources */,
 				A9A2DBB11C70632200CE0765 /* UIWebView+AFNetworking.m in Sources */,
 				A9B6902D1C70D98B007CDFB4 /* WeatherModel.m in Sources */,

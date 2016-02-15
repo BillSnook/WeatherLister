@@ -19,7 +19,7 @@
 
 #pragma mark - Managing the detail item
 
-- (void)setDetailItem:(id)newDetailItem {
+- (void)setDetailItem:(NSDictionary *)newDetailItem {
 	if (_detailItem != newDetailItem) {
 	    _detailItem = newDetailItem;
 	        
@@ -31,8 +31,23 @@
 - (void)configureView {
     // Update the user interface for the detail item.
     if (self.detailItem) {
-        NSLog( @"detailItem: %@", [self.detailItem description] );
+//        NSLog( @"detailItem: %@", [self.detailItem description] );
     }
+}
+
+- (UIImage *)getIcon: (NSString *)fileName {
+	if ( [fileName isEqualToString: @"Clear"] ) {
+		return [UIImage imageNamed: @"Sunny"];
+	} else if ( [fileName isEqualToString: @"Rain"] ) {
+		return [UIImage imageNamed: @"Rainy"];
+	} else if ( [fileName isEqualToString: @"Snow"] ) {
+		return [UIImage imageNamed: @"Snowy"];
+	} else if ( [fileName isEqualToString: @"Cloud"] ) {
+		return [UIImage imageNamed: @"Cloudy"];
+	} else {
+		NSLog( @"Unrecognized weather type: %@", fileName );
+		return nil;
+	}
 }
 
 @end

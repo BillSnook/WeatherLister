@@ -7,6 +7,7 @@
 //
 
 #import "DetailPadViewController.h"
+#import "PadDetailCell.h"
 #import "UIColor+CustomColors.h"
 
 @interface DetailPadViewController ()
@@ -15,14 +16,12 @@
 @property (weak, nonatomic) IBOutlet UIView *currentView;
 @property (weak, nonatomic) IBOutlet UILabel *currentTemp;
 @property (weak, nonatomic) IBOutlet UILabel *tomorrowTemp;
+@property (weak, nonatomic) IBOutlet UILabel *cityName;
+@property (weak, nonatomic) IBOutlet UIImageView *cityIcon;
 
 @end
 
 @implementation DetailPadViewController
-
-//- (void)setDetailItem:(id)newDetailItem {
-//    [super setDetailItem: newDetailItem];
-//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -38,7 +37,9 @@
     NSDictionary *day = list[0];
     NSNumber *tempNumber = [day objectForKey: @"temp"];
     int tempInt = [tempNumber intValue];
-    self.currentTemp.text = [@(tempInt) stringValue]; // @"68";
+	self.currentTemp.text = [@(tempInt) stringValue]; // @"68";
+	self.cityName.text = [self.detailItem objectForKey: @"name"];
+	self.cityIcon.image = [self getIcon: [day objectForKey: @"weather"]];
 
     self.backColorValue = [UIColor backgroundColor: tempInt];
 
@@ -49,7 +50,8 @@
     
     self.view.backgroundColor = self.backColorValue;
     self.currentView.backgroundColor = self.backColorValue;
-    self.collectionView.backgroundColor = self.backColorValue;
+	self.collectionView.backgroundColor = self.backColorValue;
+	self.collectionView.hidden = NO;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -57,14 +59,57 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)touchBackButton:(id)sender {
+//	if (self.splitViewController.collapsed) {
+		[(UINavigationController *)self.splitViewController.viewControllers[0]
+		 popToRootViewControllerAnimated:YES];
+//	}
 }
-*/
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+	NSArray *list = [self.detailItem objectForKey: @"list"];
+	return [list count] - 2;
+}
+
+// The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+	NSArray *list = [self.detailItem objectForKey: @"list"];
+	long listRow = indexPath.row + 2;       // list index for next
+	NSDictionary *day = list[listRow];
+	
+	PadDetailCell *pad = (PadDetailCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"padDetailCell" forIndexPath:indexPath];
+	
+	pad.contentView.backgroundColor = self.backColorValue;
+	NSNumber *dateNumber = [day objectForKey: @"dt"];
+	double dateValue = [dateNumber doubleValue];
+	NSDateFormatter *ts = [[NSDateFormatter alloc] init];
+	NSDate *testDate = [NSDate dateWithTimeIntervalSince1970: dateValue];
+	
+	[ts setDateFormat:@"EE"];
+	NSString *timeInfo = [ts stringFromDate: testDate];
+	
+	pad.cityDay.text = timeInfo;
+	NSNumber *tempNumber = [day objectForKey: @"temp"];
+	int tempInt = [tempNumber intValue];
+	pad.cityTemp.text = [@(tempInt) stringValue]; // @"68";
+	pad.padView.backgroundColor = [UIColor warmColor];
+	
+	[pad setNeedsLayout];
+	[pad layoutIfNeeded];
+	
+	CALayer *layer = pad.padView.layer;
+	layer.shadowOffset = CGSizeMake(0, 3);
+	layer.shadowColor = [[UIColor blackColor] CGColor];
+	layer.shadowRadius = 1.0f;
+	layer.shadowOpacity = 0.50f;
+	layer.shadowPath = [[UIBezierPath bezierPathWithRect:layer.bounds] CGPath];
+	
+	return pad;
+}
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+	return 1;
+}
+
 
 @end
