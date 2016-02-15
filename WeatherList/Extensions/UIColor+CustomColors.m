@@ -23,4 +23,18 @@
     return [UIColor colorWithRed:218/255.0 green:150/255.0 blue:148/255.0 alpha: 1.0];
 }
 
++ (UIColor *)backColor {
+    return [UIColor colorWithRed:238/255.0 green:235/255.0 blue:225/255.0 alpha: 1.0];
+}
+
++ (UIColor *)backgroundColor: (int)temperature {
+    if ( temperature < 65 ) {
+        return [UIColor coldColor];
+    } else if ( temperature > 75 ) {
+        return [UIColor warmColor];
+    } else {
+        return [UIColor niceColor];
+    }
+}
+
 @end

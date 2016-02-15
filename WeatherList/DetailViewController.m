@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "PhoneDetailCell.h"
 #import "UIColor+CustomColors.h"
 
 
@@ -28,22 +29,10 @@
 }
 
 - (void)configureView {
-	// Update the user interface for the detail item.
-    self.view.backgroundColor = [UIColor coldColor];
-	if (self.detailItem) {
-	    self.detailDescriptionLabel.text = [self.detailItem description];
-	}
-}
-
-- (void)viewDidLoad {
-	[super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-	[self configureView];
-}
-
-- (void)didReceiveMemoryWarning {
-	[super didReceiveMemoryWarning];
-	// Dispose of any resources that can be recreated.
+    // Update the user interface for the detail item.
+    if (self.detailItem) {
+        NSLog( @"detailItem: %@", [self.detailItem description] );
+    }
 }
 
 @end

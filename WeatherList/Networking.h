@@ -8,8 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+static NSString * const NotificationForWeatherData = @"NotificationForWeatherData";
+
 @interface Networking : NSObject
 
-- (void)getData;
+- (void)getData: (NSString *)cityName;
 
 @end

@@ -13,5 +13,8 @@
 + (UIColor *)coldColor;
 + (UIColor *)niceColor;
 + (UIColor *)warmColor;
++ (UIColor *)backColor;
+
++ (UIColor *)backgroundColor: (int)temperature;
 
 @end
