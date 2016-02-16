@@ -86,7 +86,6 @@
 		A93F6A5F1C6FFA27009E7144 /* PhoneCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhoneCell.m; path = TableCells/PhoneCell.m; sourceTree = "<group>"; };
 		A93F6A621C6FFC3F009E7144 /* PadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PadCell.h; path = TableCells/PadCell.h; sourceTree = "<group>"; };
 		A93F6A631C6FFC3F009E7144 /* PadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PadCell.m; path = TableCells/PadCell.m; sourceTree = "<group>"; };
-		A95D58D41C7389AB009BB396 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = folder; path = README.md; sourceTree = "<group>"; };
 		A976DEBE1C723056006EF19C /* PadDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PadDetailCell.h; path = TableCells/PadDetailCell.h; sourceTree = "<group>"; };
 		A976DEBF1C723056006EF19C /* PadDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PadDetailCell.m; path = TableCells/PadDetailCell.m; sourceTree = "<group>"; };
 		A9A2DB7C1C70469200CE0765 /* UIColor+CustomColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+CustomColors.h"; path = "Extensions/UIColor+CustomColors.h"; sourceTree = "<group>"; };
@@ -164,7 +163,6 @@
 		A93F6A191C6FE712009E7144 = {
 			isa = PBXGroup;
 			children = (
-				A95D58D41C7389AB009BB396 /* README.md */,
 				A93F6A241C6FE713009E7144 /* WeatherList */,
 				A93F6A411C6FE714009E7144 /* WeatherListTests */,
 				A93F6A4C1C6FE714009E7144 /* WeatherListUITests */,
