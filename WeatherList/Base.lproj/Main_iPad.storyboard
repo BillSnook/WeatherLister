@@ -161,6 +161,12 @@
                                     <outlet property="delegate" destination="JEX-9P-axG" id="RQO-3e-sT2"/>
                                 </connections>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to WeatherList. Swipe right in portrait orientation to show the city list." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1P-yt-CeB">
+                                <rect key="frame" x="20" y="20" width="560" height="560"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -168,9 +174,13 @@
                             <constraint firstItem="GAO-Cl-Wes" firstAttribute="top" secondItem="jsV-uG-aw3" secondAttribute="bottom" constant="20" id="EZo-pq-vGM"/>
                             <constraint firstItem="jt3-HC-tfB" firstAttribute="trailing" secondItem="svH-Pt-448" secondAttribute="trailingMargin" id="JcX-dR-9Gv"/>
                             <constraint firstItem="jsV-uG-aw3" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="Spp-XX-Qpm"/>
+                            <constraint firstItem="GAO-Cl-Wes" firstAttribute="top" secondItem="T1P-yt-CeB" secondAttribute="bottom" constant="20" id="a54-TI-ZEn"/>
+                            <constraint firstItem="T1P-yt-CeB" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" id="deW-yo-lj0"/>
                             <constraint firstItem="jt3-HC-tfB" firstAttribute="top" secondItem="B4S-F7-FEU" secondAttribute="bottom" constant="12" id="doB-OY-5AQ"/>
+                            <constraint firstItem="T1P-yt-CeB" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" id="k5p-NM-OTK"/>
                             <constraint firstItem="jt3-HC-tfB" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" id="mhu-dd-euK"/>
                             <constraint firstItem="B4S-F7-FEU" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="nbg-YN-HOf"/>
+                            <constraint firstItem="T1P-yt-CeB" firstAttribute="trailing" secondItem="svH-Pt-448" secondAttribute="trailingMargin" id="vuo-FA-3iz"/>
                             <constraint firstItem="jsV-uG-aw3" firstAttribute="top" secondItem="jt3-HC-tfB" secondAttribute="bottom" constant="8" id="x1S-zt-8gt"/>
                         </constraints>
                     </view>
@@ -182,6 +192,7 @@
                         <outlet property="collectionView" destination="jsV-uG-aw3" id="e4d-w3-azi"/>
                         <outlet property="currentTemp" destination="qhO-YB-M8c" id="wK5-Vu-keP"/>
                         <outlet property="currentView" destination="jt3-HC-tfB" id="mhz-Pg-ayP"/>
+                        <outlet property="startupLabel" destination="T1P-yt-CeB" id="dSM-42-fYp"/>
                         <outlet property="tomorrowTemp" destination="NlQ-6C-dVu" id="V8y-rc-yLJ"/>
                     </connections>
                 </viewController>
@@ -296,6 +307,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="xga-ww-92m"/>
+        <segue reference="Tll-UG-LXB"/>
     </inferredMetricsTieBreakers>
 </document>

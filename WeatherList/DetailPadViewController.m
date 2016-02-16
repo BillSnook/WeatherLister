@@ -19,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *cityName;
 @property (weak, nonatomic) IBOutlet UIImageView *cityIcon;
 
+@property (weak, nonatomic) IBOutlet UILabel *startupLabel;
+
 @end
 
 @implementation DetailPadViewController
@@ -33,6 +35,11 @@
     } else {
         self.currentView.hidden = YES;
     }
+	
+	if (UIInterfaceOrientationIsLandscape(self.interfaceOrientation)) {
+		self.startupLabel.hidden = YES;
+	}
+
     NSArray *list = [self.detailItem objectForKey: @"list"];
     NSDictionary *day = list[0];
     NSNumber *tempNumber = [day objectForKey: @"temp"];
@@ -66,6 +73,9 @@
 
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+	
+	self.startupLabel.hidden = YES;
+	
 	NSArray *list = [self.detailItem objectForKey: @"list"];
 	long listRow = indexPath.row + 2;       // list index for next
 	NSDictionary *day = list[listRow];
