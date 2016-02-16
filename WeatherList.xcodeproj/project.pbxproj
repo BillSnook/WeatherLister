@@ -133,6 +133,7 @@
 		A9B690341C71877F007CDFB4 /* DetailPadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailPadViewController.m; sourceTree = "<group>"; };
 		A9B690361C71B144007CDFB4 /* DetailPhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailPhoneViewController.h; sourceTree = "<group>"; };
 		A9B690371C71B144007CDFB4 /* DetailPhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailPhoneViewController.m; sourceTree = "<group>"; };
+		A9FA15FD1C738B8200F9C5FA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +164,7 @@
 		A93F6A191C6FE712009E7144 = {
 			isa = PBXGroup;
 			children = (
+				A9FA15FD1C738B8200F9C5FA /* README.md */,
 				A93F6A241C6FE713009E7144 /* WeatherList */,
 				A93F6A411C6FE714009E7144 /* WeatherListTests */,
 				A93F6A4C1C6FE714009E7144 /* WeatherListUITests */,
