@@ -27,14 +27,19 @@
                 "main": {
                     "temp_max": 78.0
                 },
-                "weather": {
-                    "?":"rain"
+                "weather": [{
+                    "main":"rain"
                 }
+				]
             },
             {   "dt":1455472800,
                 "main": {
                     "temp_max": 78.0
                 }
+				"weather": [{
+					"main":"rain"
+				}
+				]
             }
     ]
 }

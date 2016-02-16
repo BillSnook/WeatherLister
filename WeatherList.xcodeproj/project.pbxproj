@@ -19,6 +19,7 @@
 		A93F6A5D1C6FF51F009E7144 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93F6A5B1C6FF51F009E7144 /* Main_iPad.storyboard */; };
 		A93F6A601C6FFA27009E7144 /* PhoneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A93F6A5F1C6FFA27009E7144 /* PhoneCell.m */; };
 		A93F6A641C6FFC3F009E7144 /* PadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A93F6A631C6FFC3F009E7144 /* PadCell.m */; };
+		A95D58D31C737716009BB396 /* Networking.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A2DBB31C70638B00CE0765 /* Networking.m */; };
 		A976DEC01C723056006EF19C /* PadDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A976DEBF1C723056006EF19C /* PadDetailCell.m */; };
 		A9A2DB7E1C70469200CE0765 /* UIColor+CustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A2DB7D1C70469200CE0765 /* UIColor+CustomColors.m */; };
 		A9A2DBA31C70632200CE0765 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A2DB821C70632200CE0765 /* AFHTTPSessionManager.m */; };
@@ -483,6 +484,7 @@
 			files = (
 				A9B6902E1C70D98B007CDFB4 /* WeatherModel.m in Sources */,
 				A93F6A431C6FE714009E7144 /* WeatherListTests.m in Sources */,
+				A95D58D31C737716009BB396 /* Networking.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
