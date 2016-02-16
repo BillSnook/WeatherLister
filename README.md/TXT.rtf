@@ -1,0 +1,54 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf340
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red56\green110\blue255;}
+\margl1440\margr1440\vieww24200\viewh25040\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 This project was built for a coding challenge. It accesses a weather database and displays select data in a certain format.\
+\
+\pard\pardeftab720\partightenfactor0
+
+\fs26 \cf0 \expnd0\expndtw0\kerning0
+Please use Objective-C for the exercise.
+\b \
+
+\b0 Do try and use storyboards and auto-layout/size-classes.\'a0
+\b \
+
+\b0 \
+Exercise:\
+\
+1. Use the API's available at\'a0{\field{\*\fldinst{HYPERLINK "http://openweathermap.org/current#format"}}{\fldrslt \cf2 \ul \ulc2 http://openweathermap.org/current#format}}\'a0\'a0to pull the weather for 5 cities:\
+\'a0 \'a0 \'a0San Francisco, New York, London, Cairo, Tokyo\
+\'a0 \'a0 (all text is solid white and default font, size try to adjust similar to attached screens)\
+\
+2. Display the weather - Don't need pixel perfection, but have a clean presentation.\
+\'a0\'a0\
+
+\b On iPhone
+\b0 :\
+\'a0 2 screens:\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0Main Screen (default landing page) : Simple list of cities with City, main-weather, Temp. General background : beige (RGB:238,235,225). Cell backgrounds based on temperature.\'a0\
+\
+\'a0 \'a0 \'a0 \'a0 \'a0Details Screen: \'a0Details for current weather and list of next 7 days. (over all screen background to be based on the current temperature )\
+\
+Logic for deciding color based on temp:\'a0\
+Temp above 75F = red (RGB: 218,150,148)\
+\'a0 \'a0 \'a0 Temp below 65F = blue (RGB: 198,217,240)\
+\'a0 \'a0 \'a0 Temp between 74F-66F(inclusive) = peach (RGB: 252,213,181)\
+\'a0\'a0\
+\pard\pardeftab720\partightenfactor0
+\cf0 {{\NeXTGraphic unknown.png \width21620 \height16620 \noorient
+}¬}\pard\pardeftab720\partightenfactor0
+\cf0 \
+
+\b On iPad
+\b0 :\
+\'a0 1 screen: \'a0\
+\'a0 \'a0 \'a0List of cities on the left and the details for the chosen city on the right with the next 7 days weather\
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 {{\NeXTGraphic 1__#$!@%!#__unknown.png \width19780 \height14080 \noorient
+}¬}\pard\pardeftab720\partightenfactor0
+\cf0 \
+}
